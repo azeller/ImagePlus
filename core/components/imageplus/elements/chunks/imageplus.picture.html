@@ -1,0 +1,11 @@
+[[- a default idea for a responsive image chunk. Customize to your needs. -]]
+<picture>
+    <source media="(min-width: 36em)"
+            srcset="[[+source.src:pthumb=`[[+crop.options]]&w=1024`]] 1024w,
+                [[+source.src:pthumb=`[[+crop.options]]&w=640`]] 640w,
+                [[+source.src:pthumb=`[[+crop.options]]&w=320`]] 320w"
+            sizes="33.3vw"/>
+    <source srcset="[[+source.src:pthumb=`[[+crop.options]]&w=640`]] 2x,
+                [[+source.src:pthumb=`[[+crop.options]]&w=320`]] 1x"/>
+    <img class="img-responsive" src="[[+url]]" alt="[[+alt]]"/>
+</picture>
